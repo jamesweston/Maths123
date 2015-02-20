@@ -124,7 +124,7 @@ Module General
 
     Public Sub LoadFilter()
         Try
-            Using str As FileStream = File.OpenRead("filter.dbs")
+            Using str As FileStream = File.OpenRead("filter.db")
                 Dim bf As New BinaryFormatter()
                 Dim stfi As ArrayList = New ArrayList(DirectCast(bf.Deserialize(str), ArrayList))
                 censoredWords = New List(Of String)
